@@ -1,0 +1,74 @@
+<mat-card>
+    <mat-card-content>
+        <mat-card-title>Add Vendor</mat-card-title>
+        <form [formGroup]="addVendorForm" >
+            <div fxLayout="row wrap">
+                <div class="p-10 " fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100" >
+                    <img class="mat-card-avatar"  [src]='url'  *ngFor='let url of urls'>
+                        <button md-mini-fab  color="primary" class="m-l-15 btn-primary input-file-button addbtn">
+                            <input type="file" id="" placeholder="file" (change)="onSelect($event)" style="outline: none;" class="matInput b-b" multiple>
+                        </button>
+                    <!-- <input class="matInput  b-b" placeholder="file" type="file" (change)="onSelect($event)" multiple><br>
+                    <img [src]="url" *ngFor='let url of urls' height="100" alt=""> -->
+              </div>
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput id="vendor_username" name="vendor_username" formControlName="vendor_username" placeholder="Username" >
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput id="vendor_email" name="vendor_email" formControlName="vendor_email" placeholder="Email" >
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput id="vendor_first_name" name="vendor_first_name" formControlName="vendor_first_name" placeholder="First name" >
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput id="vendor_last_name" name="vendor_last_name" formControlName="vendor_last_name" placeholder="Last name" >
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                      <input matInput placeholder="Vendor Country" id="vendor_country" name="vendor_country" formControlName="vendor_country" type="text">
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                      <input matInput placeholder="vendor Address" id="vendor_address" name="vendor_address" formControlName="vendor_address" type="text">
+                    </mat-form-field>
+                </div>
+                  <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                        <mat-select placeholder="Account Type" id="vendor_account_type" name="vendor_account_type" formControlName="vendor_account_type">
+                            <mat-option value="seller">seller</mat-option>
+                            <mat-option value="retailer">Retailer</mat-option>
+                            <mat-option value="shop">Shop</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                  </div>  
+                  <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                      <input matInput placeholder="vendor Phone" id="vendor_phone" name="vendor_phone" formControlName="vendor_phone" type="text">
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                      <input matInput placeholder=" Password" id="password" name="password" formControlName="password" type="text">
+                    </mat-form-field>
+                </div>    
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                      <input matInput placeholder=" Confirm Password" id="confirm_password" name="confirm_password" type="text">
+                    </mat-form-field>
+                </div>    
+                <div fxFlex.gt-md="75" class="text-right">
+                    <button mat-raised-button (click)="addVendor()"  color="primary">Add Product</button>
+                </div>           
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

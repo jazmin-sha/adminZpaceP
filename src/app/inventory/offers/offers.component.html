@@ -1,0 +1,32 @@
+<mat-card>
+    <mat-card-content>
+        <!-- <mat-card-title>Create Stock</mat-card-title> -->
+        <form [formGroup]="offerForm">
+            <div fxLayout="row wrap">
+                <div class="p-10" fxFlex.gt-sm="70" fxFlex.gt-xs="70" fxFlex="100">
+                    <mat-form-field>
+                      <input matInput placeholder="Offer Name" formControlName="offer_name">
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="70" fxFlex.gt-xs="70" fxFlex="100">
+                    <mat-form-field>
+                      <input matInput placeholder="Actual Price" formControlName="prod_price_selling">
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="70" fxFlex.gt-xs="70" fxFlex="100">
+                    <mat-form-field>
+                      <input matInput placeholder="Offer Price" formControlName="prod_price_offer">
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="70" fxFlex.gt-xs="70" fxFlex="100">
+                    <mat-form-field>
+                      <input matInput placeholder="Decription" formControlName="prod_description">
+                    </mat-form-field>
+                </div>
+            </div>
+            <mat-card-actions>
+                <button mat-raised-button (click)="addOffer()" color="primary" type="submit" >Create</button>
+              </mat-card-actions>
+        </form>
+    </mat-card-content>
+</mat-card>

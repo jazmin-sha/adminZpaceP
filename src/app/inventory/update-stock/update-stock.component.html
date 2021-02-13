@@ -1,0 +1,32 @@
+<mat-card>
+    <mat-card-content>
+        <!-- <mat-card-title>Create Stock</mat-card-title> -->
+        <form [formGroup]="updateStockForm">
+            <div fxLayout="row wrap">
+                <div class="p-10" fxFlex.gt-sm="70" fxFlex.gt-xs="70" fxFlex="100">
+                    <mat-form-field>
+                      <input matInput placeholder="Product Id" formControlName="id">
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="70" fxFlex.gt-xs="70" fxFlex="100">
+                    <mat-form-field>
+                      <input matInput placeholder="Available Stock" formControlName="prod_stock">
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="70" fxFlex.gt-xs="70" fxFlex="100">
+                    <mat-form-field>
+                      <input matInput placeholder="Product Stock For Online" formControlName="prod_stock_online">
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="70" fxFlex.gt-xs="70" fxFlex="100">
+                    <mat-form-field>
+                      <input matInput placeholder="Stock for Manual Sale" formControlName="prod_stock_manual">
+                    </mat-form-field>
+                </div>
+            </div>
+            <mat-card-actions>
+                <button mat-raised-button (click)="updateStock()" color="primary" type="submit" >Create</button>
+              </mat-card-actions>
+        </form>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,35 @@
+<!-- ============================================================== -->
+<!-- row -->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+    <!-- Card column -->
+    <div fxFlex.gt-sm="100%" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title> Inventory </mat-card-title>
+            </mat-card-content>
+            <mat-tab-group>
+                <mat-tab label="All Inventories">
+                    <mat-card-content>
+                        <app-all-inventry-list></app-all-inventry-list>
+                    </mat-card-content>
+                </mat-tab>
+                <mat-tab label="Create Stock">
+                    <mat-card-content>
+                        <app-create-stock></app-create-stock>
+                    </mat-card-content>
+                </mat-tab>
+                <mat-tab label="Update Stock">
+                    <mat-card-content>
+                        <app-update-stock></app-update-stock>
+                    </mat-card-content>
+                </mat-tab>
+                <mat-tab label="Offers">
+                    <mat-card-content>
+                        <app-offers></app-offers>
+                    </mat-card-content>
+                </mat-tab>
+            </mat-tab-group>
+        </mat-card>
+    </div>
+</div>

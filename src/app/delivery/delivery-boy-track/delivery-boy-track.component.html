@@ -1,0 +1,26 @@
+
+<mat-card>
+    <mat-card-content>
+        <mat-card-title>Track Delivery Boy</mat-card-title>
+        <form [formGroup]="deliveryTrackForm">
+            <div fxLayout="row wrap">
+
+                <div class="p-10" fxFlex.gt-sm="70" fxFlex.gt-xs="70" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput id="delivery_boy_name" formControlName="delivery_boy_name" name="delivery_boy_name" placeholder="Delivery Boy  name" >
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="70" fxFlex.gt-xs="70" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput id="order_id" formControlName="order_id" name="order_id" placeholder="Order Id" >
+                    </mat-form-field>
+                </div>
+                <div fxFlex.gt-md="70" class="text-right">
+                    <button mat-raised-button (click)="letsTrack()" color="primary">Track</button>
+                </div> 
+            </div>   
+    
+        </form>
+    </mat-card-content>
+</mat-card>
+

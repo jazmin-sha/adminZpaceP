@@ -1,0 +1,35 @@
+
+<mat-card>
+    <mat-card-content>
+        <mat-card-title>Add Delivery Person</mat-card-title>
+        <form [formGroup]="addDeliveryPersonForm">
+            <div fxLayout="row wrap">
+
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput id="delivery_boy_name" formControlName="delivery_boy_name" name="delivery_boy_name" placeholder="Delivery Boy name" >
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput id="delivery_boy_email" formControlName="delivery_boy_email" name="delivery_boy_email" placeholder="Email Id" >
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput id="delivery_boy_phone" formControlName="delivery_boy_phone" name="delivery_boy_phone" placeholder="Phone Number" >
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput id="delivery_boy_address" formControlName="delivery_boy_address" name="delivery_boy_address" placeholder="Address" >
+                    </mat-form-field>
+                </div>
+                <div fxFlex.gt-md="75" class="text-right">
+                    <button mat-raised-button (click)="addDeliveryPerson()" color="primary">Add Customer</button>
+                </div> 
+            </div>   
+    
+        </form>
+    </mat-card-content>
+</mat-card>

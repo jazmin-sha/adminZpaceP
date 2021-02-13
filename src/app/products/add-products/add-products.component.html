@@ -1,0 +1,117 @@
+<mat-card>
+    <mat-card-content>
+        <mat-card-title>Add a Product</mat-card-title>
+        <form [formGroup]="addProductForm" >
+            <div fxLayout="row wrap">
+                <div class="p-10 " fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100" >
+                    <img class="mat-card-avatar"  [src]='url'  *ngFor='let url of urls'>
+                        <button md-mini-fab  color="primary" class="m-l-15 btn-primary input-file-button addbtn">
+                            <input type="file" id="" placeholder="file" (change)="onSelect($event)" formControlName="prod_image" style="outline: none;" class="matInput b-b" multiple>
+                        </button>
+                    <!-- <input class="matInput  b-b" placeholder="file" type="file" (change)="onSelect($event)" multiple><br>
+                    <img [src]="url" *ngFor='let url of urls' height="100" alt=""> -->
+              </div>
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput id="prod_name" name="prod_name" formControlName="prod_name" placeholder="Product name" >
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                      <input matInput placeholder="Seller" id="prod_seller" name="prod_seller" formControlName="prod_seller" type="text">
+                    </mat-form-field>
+                </div>
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                        <mat-select placeholder="Product Variant" id="prod_variant" name="prod_variant" formControlName="prod_variant">
+                            <mat-option value="Option 1">Option 1</mat-option>
+                            <mat-option value="Option 2">Option 2</mat-option>
+                            <mat-option value="Option 3">Option 3</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <!-- <mat-error *ngIf="addProductForm.get('website').hasError('required')">
+                        Please select website
+                    </mat-error> -->
+                  </div>  
+                  <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                        <mat-select placeholder="Product Category" id="prod_category" name="prod_category" formControlName="prod_category">
+                            <mat-option value="food">food</mat-option>
+                            <mat-option value="dress">dress</mat-option>
+                            <mat-option value="electrical">electrical</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                  </div>      
+                  <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                      <input matInput placeholder="Pack Type"  type="text">
+                    </mat-form-field>
+                </div>  
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                        <mat-form-field>
+                            <mat-select  placeholder="Returnabl or Not" id="prod_isReturnable" name="prod_isReturnable" formControlName="prod_isReturnable">
+                                <mat-option value="Yes">Yes</mat-option>
+                                <mat-option value="No">No</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div> 
+                    <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                        <mat-form-field>
+                            <input matInput placeholder="Price" id="prod_price_selling" name="prod_price_selling" formControlName="prod_price_selling" type="number">
+                          </mat-form-field>
+                    </div> 
+                </div> 
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                        <mat-form-field >
+                            <input matInput placeholder="Dicount" id="prod_discount" name="prod_discount" formControlName="prod_discount" type="number">
+                          </mat-form-field>
+                        </div> 
+                    <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                        <mat-form-field>
+                            <input matInput placeholder="Offer Price" id="prod_price_offer" name="prod_price_offer" formControlName="prod_price_offer" type="text">
+                          </mat-form-field>
+                    </div> 
+                </div>   
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                        <mat-form-field >
+                            <input matInput id="prod_price_total" name="prod_price_total" formControlName="prod_price_total" placeholder="Total Price Including Delivery Charge"  type="text">
+                          </mat-form-field>
+                        </div> 
+                    <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                        <mat-form-field>
+                            <input matInput id="prod_discount_added" name="prod_discount_added" formControlName="prod_discount_added" placeholder="Discount From Seller"  type="text">
+                          </mat-form-field>
+                    </div> 
+                </div> 
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                        <mat-form-field >
+                            <input matInput  placeholder="Stock for Online Sale"  type="text">
+                          </mat-form-field>
+                         </div> 
+                    <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                        <mat-form-field>
+                            <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div> 
+                </div>   
+                <div class="p-10" fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+                    <mat-form-field>
+                        <mat-select  placeholder="Country of Region">
+                            <mat-option value="india">india</mat-option>
+                            <mat-option value="pak">pak</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>   
+                <div fxFlex.gt-md="95" class="text-right">
+                    <button mat-raised-button (click)="addProduct()"  color="primary">Add Product</button>
+                </div>           
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

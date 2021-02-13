@@ -1,0 +1,25 @@
+<!-- ============================================================== -->
+<!-- row -->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+    <!-- Card column -->
+    <div fxFlex.gt-sm="100%" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title> Customers </mat-card-title>
+            </mat-card-content>
+            <mat-tab-group>
+                <mat-tab label="Registered Customers">
+                    <mat-card-content>
+                        <app-reg-customer></app-reg-customer>
+                    </mat-card-content>
+                </mat-tab>
+                <mat-tab label="Add Customers">
+                    <mat-card-content>
+                        <app-add-customer></app-add-customer>
+                    </mat-card-content>
+                </mat-tab>
+            </mat-tab-group>
+        </mat-card>
+    </div>
+</div>

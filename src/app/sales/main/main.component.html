@@ -1,0 +1,25 @@
+<!-- ============================================================== -->
+<!-- row -->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+    <!-- Card column -->
+    <div fxFlex.gt-sm="100%" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title> Sales </mat-card-title>
+            </mat-card-content>
+            <mat-tab-group>
+                <mat-tab label="Sales Details">
+                    <mat-card-content>
+                        <app-sales-details-list></app-sales-details-list>
+                    </mat-card-content>
+                </mat-tab>
+                <mat-tab label="SalesReturn Details">
+                    <mat-card-content>
+                        <app-sales-return-detail></app-sales-return-detail>
+                    </mat-card-content>
+                </mat-tab>
+            </mat-tab-group>
+        </mat-card>
+    </div>
+</div>
